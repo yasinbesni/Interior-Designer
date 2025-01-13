@@ -2,8 +2,18 @@ body{
     font-family: "Poppins", serif;
     margin: 0;
     background-color: #00000068 ;
-    
+  }
+  .mobilnav{
+        display:none;
 }
+  .sidebar {
+    transform: translateY(350px);
+    -webkit-transform: translateY(350px);
+    -moz-transform: translateY(350px);
+    -ms-transform: translateY(350px);
+    -o-transform: translateY(350px);
+}
+  
 h2{
     text-align: center;
     font-weight: 300;
@@ -17,6 +27,11 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.links{
+  margin-left: 15%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 .links ul {
   display: flex;
@@ -73,21 +88,82 @@ a:hover{
   .banner {
     font-weight: 300;
     font-style: italic;
-    font-size: 25px;
-  }
+    font-size: 20px;
+}
+  
   
   .message {
-    color: red;
-    font-size: 50px;
+        color: red;
+    font-size: 28px;
     font-style: italic;
     margin-top: 0px;
     border-bottom: 1px solid black;
     padding-bottom: 8px;
-  }
+}
+
   
   .contact p {
-    margin: 0;
+    margin-left: 0;
     font-weight: 600;
+    font-size: small;
+  }
+  .hamburgerFixed{
+    margin-top: -177px;
+  }
+  /* animation */
+  .animationBar1 {
+    animation: 1s fadeBar1;
+    animation-fill-mode: forwards;
+  }
+  
+  .animationBar2 {
+    animation: 1s fadeBar2;
+    animation-fill-mode: forwards;
+  }
+  
+  .animationBar3 {
+    animation: 1s fadeBar3;
+    animation-fill-mode: forwards;
+    margin-top: 20px;
+  }
+ 
+ @keyframes sidebarb{
+  from{right: -100px;}to{right: 0px;}
+ }
+  
+  @keyframes fadeBar1 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(45deg) translate(5px, 6px);
+      -webkit-transform: rotate(45deg) translate(5px, 6px);
+      -moz-transform: rotate(45deg) translate(5px, 6px);
+      -ms-transform: rotate(45deg) translate(5px, 6px);
+      -o-transform: rotate(45deg) translate(5px, 6px);
+}
+  }
+  
+  @keyframes fadeBar2 {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+  
+  @keyframes fadeBar3 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(-45deg) translate(5px, -6px);
+      -webkit-transform: rotate(-45deg) translate(5px, -6px);
+      -moz-transform: rotate(-45deg) translate(5px, -6px);
+      -ms-transform: rotate(-45deg) translate(5px, -6px);
+      -o-transform: rotate(-45deg) translate(5px, -6px);
+}
   }
   /* mini Desktop */
   @media screen and (max-width: 1024px) {
@@ -100,10 +176,39 @@ a:hover{
   }
   /* Tablet */
   @media screen and (max-width: 768px) {
+    header,section{
+
+    }
+    .mobilnav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      justify-content:flex-end;
+      background-color: #bea69e;
+      width: 218px;
+      padding: 20px;
+      height: 20vh;
+      z-index: 1;
+      top: -350px;
+      right: 0;
+      align-items: center;
+      padding-top: 10%;
+      gap: 20px;
+      transition:transform 1s ;
+      -webkit-transition:transform 1s ;
+      -moz-transition:transform 1s ;
+      -ms-transition:transform 1s ;
+      -o-transition:transform 1s ;
+     
+}
     .links{
       display: none;
     }
-    
+    .hamburger{
+      margin-right: 20px;
+      z-index: 2;
+      margin-top: -34px;
+      }
     .card:hover{
       opacity: 1;
       width: 49%;
@@ -116,14 +221,9 @@ a:hover{
   .why{
     margin: auto;
   }
-  .hamburger{
-    padding-top: 25px;
-    align-self:first baseline;
-    
-  }
-  .hamburger div{
+  .bar1, .bar2, .bar3{
     width: 45px;
-    height: 8px;
+    height: 5px;
     border-radius: 15px;
     background-color: #000;
     margin: 3px;
@@ -131,11 +231,12 @@ a:hover{
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-}
+ }
 .navbar{
   margin: 0;
   justify-content: space-around;
 }
+
 }
 /* mobile */
 @media screen and (max-width: 480px) {
@@ -146,15 +247,17 @@ h1{
   width: 98%;
   padding-left: 10%;
 }
-.card:hover{
-  width: 98%;
-}
-.hamburger{
-  padding-top: 15px;
+/* .why{
   margin: 15px;
-  align-self:first baseline;
-}
-.why{
-  margin: 15px;
+} */
+ .hamburger{
+  margin-right: 20px;
+        z-index: 2;
+        margin-top: -97px;
+ }
+ .mobilnav{
+  width:150px ;
+  border-end-start-radius: 16px;
+  width: 150px;
 }
 }
