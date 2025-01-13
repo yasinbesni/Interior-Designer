@@ -1,7 +1,11 @@
 body{
     font-family: "Poppins", serif;
     margin: 0;
-    background-color: #00000068 ;
+    background-color: #bea69e ;
+  }
+  p, img{
+    width: 100%;
+    height: 100%;
   }
   .mobilnav{
         display:none;
@@ -170,14 +174,16 @@ a:hover{
     .card img{
       height: 350px;
     }
-    header, section{
-      width: 98%;
+    body{
+      width: 100%;
     }
+    
   }
   /* Tablet */
   @media screen and (max-width: 768px) {
-    header,section{
-
+    header,section,p{
+      width: 95%;
+      background-color: #9e9490;
     }
     .mobilnav{
       display: flex;
@@ -212,14 +218,19 @@ a:hover{
     .card:hover{
       opacity: 1;
       width: 49%;
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-  }
+      transform: scale(1.08);
+      -webkit-transform: scale(1.08);
+      -moz-transform: scale(1.08);
+      -ms-transform: scale(1.08);
+      -o-transform: scale(1.08);
+}
   .why{
-    margin: auto;
+    display: inline-block;
+    width: 98%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0px ;
   }
   .bar1, .bar2, .bar3{
     width: 45px;
@@ -240,16 +251,21 @@ a:hover{
 }
 /* mobile */
 @media screen and (max-width: 480px) {
+  .card:hover{
+    opacity: 1;
+    width: 100%;
+    transform: translateY(0px) scale(1.08);
+    -webkit-transform: translateY(0px) scale(1.08);
+    -moz-transform: translateY(0px) scale(1.08);
+    -ms-transform: translateY(0px) scale(1.08);
+    -o-transform: translateY(0px) scale(1.08);
+}
 h1{
   max-width: 300px;
 }
 .card{
-  width: 98%;
-  padding-left: 10%;
+  width: 100%;
 }
-/* .why{
-  margin: 15px;
-} */
  .hamburger{
   margin-right: 20px;
         z-index: 2;
@@ -258,6 +274,5 @@ h1{
  .mobilnav{
   width:150px ;
   border-end-start-radius: 16px;
-  width: 150px;
 }
 }
